@@ -1,6 +1,7 @@
 {
   "name": "angular22meshcore",
   "private": true,
+  "type": "module",
   "version": "0.0.0",
   "scripts": {
     "build": "nx build mesh-monitor",

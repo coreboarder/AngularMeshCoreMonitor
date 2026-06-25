@@ -1,1 +1,1 @@
-export * from './locales';
+export * from './locales.ts';

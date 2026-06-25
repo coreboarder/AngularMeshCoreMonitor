@@ -1,1 +1,1 @@
-export * from './log-entry';
+export * from './log-entry.ts';

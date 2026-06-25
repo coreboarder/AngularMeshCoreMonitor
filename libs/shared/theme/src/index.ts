@@ -1,1 +1,1 @@
-export * from './bootstrap-theme';
+export * from './bootstrap-theme.ts';

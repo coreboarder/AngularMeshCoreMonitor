@@ -1,4 +1,4 @@
-import { MeshStateStore } from '@mesh/state';
+import { MeshStateStore } from '../../../libs/mesh/state/src/mesh-state.ts';
 
 export interface GatewayConfig {
   apiKey: string;
@@ -7,7 +7,11 @@ export interface GatewayConfig {
 }
 
 export class MeshStreamGateway {
-  constructor(private readonly config: GatewayConfig) {}
+  private readonly config: GatewayConfig;
+
+  constructor(config: GatewayConfig) {
+    this.config = config;
+  }
 
   start(): MeshStateStore {
     if (!this.config.apiKey) {

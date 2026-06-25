@@ -1,1 +1,1 @@
-export * from './grid-layout';
+export * from './grid-layout.ts';

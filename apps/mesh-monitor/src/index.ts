@@ -1,3 +1,3 @@
-export * from './app-shell';
+export * from './app-shell.ts';
 
 export const appName = 'mesh-monitor';

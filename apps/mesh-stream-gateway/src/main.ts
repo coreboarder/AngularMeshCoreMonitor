@@ -1,4 +1,4 @@
-import { MeshStreamGateway } from './server';
+import { MeshStreamGateway } from './server.ts';
 
 const gateway = new MeshStreamGateway({
   apiKey: process.env['MESH_API_KEY'] ?? 'local-dev-key',

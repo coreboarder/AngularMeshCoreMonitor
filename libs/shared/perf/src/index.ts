@@ -1,1 +1,1 @@
-export * from './perf-metrics';
+export * from './perf-metrics.ts';

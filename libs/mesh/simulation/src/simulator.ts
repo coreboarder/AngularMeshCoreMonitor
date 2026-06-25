@@ -1,5 +1,5 @@
-import type { MeshNodeTelemetry, MeshNodeRole } from '@mesh/domain-models';
-import type { MeshStreamEnvelope } from '@mesh/stream-contracts';
+import type { MeshNodeTelemetry, MeshNodeRole } from '../../domain-models/src/index.ts';
+import type { MeshStreamEnvelope } from '../../stream-contracts/src/index.ts';
 
 const roles: MeshNodeRole[] = ['client', 'repeater', 'room-server'];
 

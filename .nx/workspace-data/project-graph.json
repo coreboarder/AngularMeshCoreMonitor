@@ -51,7 +51,7 @@
           "serve": {
             "executor": "nx:run-commands",
             "options": {
-              "command": "node apps/mesh-stream-gateway/src/main.ts"
+              "command": "node --experimental-strip-types apps/mesh-stream-gateway/src/main.ts"
             },
             "configurations": {},
             "parallelism": true
@@ -120,7 +120,7 @@
           "serve": {
             "executor": "nx:run-commands",
             "options": {
-              "command": "node apps/mesh-monitor/src/main.ts"
+              "command": "node --experimental-strip-types apps/mesh-monitor/src/main.ts"
             },
             "configurations": {},
             "parallelism": true
@@ -2620,5 +2620,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1782364451779
+  "computedAt": 1782364702879
 }

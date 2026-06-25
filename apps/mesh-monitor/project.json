@@ -7,7 +7,7 @@
     "serve": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "node apps/mesh-monitor/src/main.ts"
+        "command": "node --experimental-strip-types apps/mesh-monitor/src/main.ts"
       }
     },
     "build": {

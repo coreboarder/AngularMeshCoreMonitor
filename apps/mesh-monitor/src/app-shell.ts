@@ -1,8 +1,8 @@
-import { createDashboardModel } from '@mesh/feature-dashboard';
-import { createBootstrapThemeTokens } from '@shared/theme';
-import { supportedLocales } from '@shared/i18n';
-import { defaultPerfMetrics } from '@shared/perf';
-import type { MeshNodeTelemetry } from '@mesh/domain-models';
+import { createDashboardModel } from '../../../libs/mesh/feature-dashboard/src/index.ts';
+import { createBootstrapThemeTokens } from '../../../libs/shared/theme/src/index.ts';
+import { supportedLocales } from '../../../libs/shared/i18n/src/index.ts';
+import { defaultPerfMetrics } from '../../../libs/shared/perf/src/index.ts';
+import type { MeshNodeTelemetry } from '../../../libs/mesh/domain-models/src/index.ts';
 
 export interface MeshMonitorShellViewModel {
   title: string;
@@ -10,6 +10,7 @@ export interface MeshMonitorShellViewModel {
   perf: typeof defaultPerfMetrics;
   theme: ReturnType<typeof createBootstrapThemeTokens>;
   dashboard: ReturnType<typeof createDashboardModel>;
+  nodes: MeshNodeTelemetry[];
 }
 
 export function createMeshMonitorShell(nodes: MeshNodeTelemetry[]): MeshMonitorShellViewModel {
@@ -19,5 +20,6 @@ export function createMeshMonitorShell(nodes: MeshNodeTelemetry[]): MeshMonitorS
     perf: defaultPerfMetrics,
     theme: createBootstrapThemeTokens('diagnostic'),
     dashboard: createDashboardModel(nodes),
+    nodes,
   };
 }

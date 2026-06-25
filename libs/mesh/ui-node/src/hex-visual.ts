@@ -1,4 +1,4 @@
-import type { MeshNodeTelemetry } from '@mesh/domain-models';
+import type { MeshNodeTelemetry } from '../../domain-models/src/index.ts';
 
 export interface HexVisualState {
   borderGlow: number;

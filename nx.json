@@ -1,7 +1,10 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "sharedGlobals": []
   },
   "workspaceLayout": {
@@ -23,5 +26,6 @@
     "security": "libs/shared/security/project.json",
     "observability": "libs/shared/observability/project.json",
     "theme": "libs/shared/theme/project.json"
-  }
+  },
+  "analytics": false
 }

@@ -1,6 +1,6 @@
-import type { MeshNodeTelemetry } from '@mesh/domain-models';
-import type { MeshStreamEnvelope } from '@mesh/stream-contracts';
-import { MeshTrafficSimulator } from '@mesh/simulation';
+import type { MeshNodeTelemetry } from '../../domain-models/src/index.ts';
+import type { MeshStreamEnvelope } from '../../stream-contracts/src/index.ts';
+import { MeshTrafficSimulator } from '../../simulation/src/index.ts';
 
 export type MeshStreamSource = 'simulator' | 'serial' | 'tcp';
 
@@ -13,8 +13,11 @@ export interface MeshStateSnapshot {
 export class MeshStateStore {
   private readonly nodes = new Map<string, MeshNodeTelemetry>();
   private sequence = 0;
+  private readonly simulator: MeshTrafficSimulator;
 
-  constructor(private readonly simulator = new MeshTrafficSimulator({ nodeCount: 250 })) {}
+  constructor(simulator = new MeshTrafficSimulator({ nodeCount: 250 })) {
+    this.simulator = simulator;
+  }
 
   tick(): MeshStateSnapshot {
     const envelopes = this.simulator.nextTick();

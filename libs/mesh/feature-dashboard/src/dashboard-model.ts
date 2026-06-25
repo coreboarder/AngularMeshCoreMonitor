@@ -1,10 +1,11 @@
-import type { MeshNodeTelemetry } from '@mesh/domain-models';
-import { deriveGridLayout } from '@mesh/ui-grid';
+import type { MeshNodeTelemetry } from '../../domain-models/src/index.ts';
+import { deriveGridLayout } from '../../ui-grid/src/index.ts';
 
 export interface DashboardModel {
   nodeCount: number;
   grid: { rows: number; columns: number };
   selectedNode?: MeshNodeTelemetry;
+  nodes: MeshNodeTelemetry[];
 }
 
 export function createDashboardModel(nodes: MeshNodeTelemetry[]): DashboardModel {
@@ -12,5 +13,6 @@ export function createDashboardModel(nodes: MeshNodeTelemetry[]): DashboardModel
     nodeCount: nodes.length,
     grid: deriveGridLayout(nodes.length),
     selectedNode: nodes[0],
+    nodes,
   };
 }

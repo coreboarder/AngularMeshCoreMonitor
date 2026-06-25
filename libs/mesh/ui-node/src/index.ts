@@ -1,1 +1,1 @@
-export * from './hex-visual';
+export * from './hex-visual.ts';

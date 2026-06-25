@@ -7,7 +7,7 @@
     "serve": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "node apps/mesh-stream-gateway/src/main.ts"
+        "command": "node --experimental-strip-types apps/mesh-stream-gateway/src/main.ts"
       }
     },
     "build": {

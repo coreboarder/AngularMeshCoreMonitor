@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx serve mesh-monitor",
+    "startTime": "2026-06-25T05:17:54.243Z",
+    "endTime": "2026-06-25T05:17:54.407Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "mesh-monitor:serve",
+      "target": "serve",
+      "projectName": "mesh-monitor",
+      "hash": "11661693076028227949",
+      "startTime": "2026-06-25T05:17:54.289Z",
+      "endTime": "2026-06-25T05:17:54.406Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

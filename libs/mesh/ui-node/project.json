@@ -1,0 +1,6 @@
+{
+  "name": "ui-node",
+  "root": "libs/mesh/ui-node",
+  "sourceRoot": "libs/mesh/ui-node/src",
+  "projectType": "library"
+}

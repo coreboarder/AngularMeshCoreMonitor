@@ -1,0 +1,6 @@
+{
+  "name": "feature-dashboard",
+  "root": "libs/mesh/feature-dashboard",
+  "sourceRoot": "libs/mesh/feature-dashboard/src",
+  "projectType": "library"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "state",
+  "root": "libs/mesh/state",
+  "sourceRoot": "libs/mesh/state/src",
+  "projectType": "library"
+}

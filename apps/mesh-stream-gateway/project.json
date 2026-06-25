@@ -1,0 +1,20 @@
+{
+  "name": "mesh-stream-gateway",
+  "root": "apps/mesh-stream-gateway",
+  "sourceRoot": "apps/mesh-stream-gateway/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node apps/mesh-stream-gateway/src/main.ts"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo build mesh-stream-gateway"
+      }
+    }
+  }
+}

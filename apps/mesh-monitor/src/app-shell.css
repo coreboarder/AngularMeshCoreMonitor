@@ -1,0 +1,23 @@
+.mesh-shell {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  color: var(--mesh-text);
+  background: radial-gradient(circle at top, var(--mesh-surface-alt), var(--mesh-surface));
+}
+
+.mesh-shell__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mesh-shell__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.mesh-shell__meta {
+  opacity: 0.8;
+}

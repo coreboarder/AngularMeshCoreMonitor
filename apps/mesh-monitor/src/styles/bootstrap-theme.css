@@ -1,0 +1,9 @@
+:root {
+  --mesh-surface: #08111a;
+  --mesh-surface-alt: #102235;
+  --mesh-text: #d8f6ff;
+  --mesh-accent: #72ff9e;
+  --mesh-warning: #ffd36e;
+  --mesh-critical: #ff7f8d;
+  --mesh-success: #72ff9e;
+}

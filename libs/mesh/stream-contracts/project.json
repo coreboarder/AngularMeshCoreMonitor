@@ -1,0 +1,6 @@
+{
+  "name": "stream-contracts",
+  "root": "libs/mesh/stream-contracts",
+  "sourceRoot": "libs/mesh/stream-contracts/src",
+  "projectType": "library"
+}

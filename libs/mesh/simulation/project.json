@@ -1,0 +1,6 @@
+{
+  "name": "simulation",
+  "root": "libs/mesh/simulation",
+  "sourceRoot": "libs/mesh/simulation/src",
+  "projectType": "library"
+}

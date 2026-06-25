@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": []
+  },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "libs"
+  },
+  "projects": {
+    "mesh-monitor": "apps/mesh-monitor/project.json",
+    "mesh-stream-gateway": "apps/mesh-stream-gateway/project.json",
+    "domain-models": "libs/mesh/domain-models/project.json",
+    "simulation": "libs/mesh/simulation/project.json",
+    "stream-contracts": "libs/mesh/stream-contracts/project.json",
+    "state": "libs/mesh/state/project.json",
+    "ui-node": "libs/mesh/ui-node/project.json",
+    "ui-grid": "libs/mesh/ui-grid/project.json",
+    "feature-dashboard": "libs/mesh/feature-dashboard/project.json",
+    "i18n": "libs/shared/i18n/project.json",
+    "perf": "libs/shared/perf/project.json",
+    "security": "libs/shared/security/project.json",
+    "observability": "libs/shared/observability/project.json",
+    "theme": "libs/shared/theme/project.json"
+  }
+}

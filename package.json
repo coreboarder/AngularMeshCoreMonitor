@@ -1,0 +1,15 @@
+{
+  "name": "angular22meshcore",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "nx build mesh-monitor",
+    "serve": "nx serve mesh-monitor",
+    "test": "nx test mesh-monitor",
+    "lint": "nx lint mesh-monitor",
+    "gateway:serve": "nx serve mesh-stream-gateway"
+  },
+  "devDependencies": {
+    "nx": "latest"
+  }
+}

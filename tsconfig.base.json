@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+        "rootDir": ".",
+        "baseUrl": ".",
+        "paths": {
+            "@mesh/domain-models": [
+                "libs/mesh/domain-models/src/index.ts"
+            ],
+            "@mesh/simulation": [
+                "libs/mesh/simulation/src/index.ts"
+            ],
+            "@mesh/stream-contracts": [
+                "libs/mesh/stream-contracts/src/index.ts"
+            ],
+            "@mesh/state": [
+                "libs/mesh/state/src/index.ts"
+            ],
+            "@mesh/ui-node": [
+                "libs/mesh/ui-node/src/index.ts"
+            ],
+            "@mesh/ui-grid": [
+                "libs/mesh/ui-grid/src/index.ts"
+            ],
+            "@mesh/feature-dashboard": [
+                "libs/mesh/feature-dashboard/src/index.ts"
+            ],
+            "@shared/i18n": [
+                "libs/shared/i18n/src/index.ts"
+            ],
+            "@shared/perf": [
+                "libs/shared/perf/src/index.ts"
+            ],
+            "@shared/security": [
+                "libs/shared/security/src/index.ts"
+            ],
+            "@shared/observability": [
+                "libs/shared/observability/src/index.ts"
+            ],
+            "@shared/theme": [
+                "libs/shared/theme/src/index.ts"
+            ]
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "domain-models",
+  "root": "libs/mesh/domain-models",
+  "sourceRoot": "libs/mesh/domain-models/src",
+  "projectType": "library"
+}

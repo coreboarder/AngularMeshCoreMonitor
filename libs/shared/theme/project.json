@@ -1,0 +1,6 @@
+{
+  "name": "theme",
+  "root": "libs/shared/theme",
+  "sourceRoot": "libs/shared/theme/src",
+  "projectType": "library"
+}

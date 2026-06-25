@@ -1,0 +1,6 @@
+{
+  "name": "ui-grid",
+  "root": "libs/mesh/ui-grid",
+  "sourceRoot": "libs/mesh/ui-grid/src",
+  "projectType": "library"
+}

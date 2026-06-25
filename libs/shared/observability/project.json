@@ -1,0 +1,6 @@
+{
+  "name": "observability",
+  "root": "libs/shared/observability",
+  "sourceRoot": "libs/shared/observability/src",
+  "projectType": "library"
+}

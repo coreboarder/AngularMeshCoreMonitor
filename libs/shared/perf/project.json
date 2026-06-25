@@ -1,0 +1,6 @@
+{
+  "name": "perf",
+  "root": "libs/shared/perf",
+  "sourceRoot": "libs/shared/perf/src",
+  "projectType": "library"
+}

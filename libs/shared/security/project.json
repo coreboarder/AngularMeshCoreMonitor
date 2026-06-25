@@ -1,0 +1,6 @@
+{
+  "name": "security",
+  "root": "libs/shared/security",
+  "sourceRoot": "libs/shared/security/src",
+  "projectType": "library"
+}

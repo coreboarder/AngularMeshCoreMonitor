@@ -1,0 +1,32 @@
+{
+  "name": "mesh-monitor",
+  "root": "apps/mesh-monitor",
+  "sourceRoot": "apps/mesh-monitor/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node apps/mesh-monitor/src/main.ts"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo build mesh-monitor"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo test mesh-monitor"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo lint mesh-monitor"
+      }
+    }
+  }
+}

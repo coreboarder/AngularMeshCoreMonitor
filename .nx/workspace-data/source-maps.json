@@ -1,0 +1,358 @@
+{
+  "apps/mesh-monitor": {
+    "root": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.command": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.command": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.command": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options.command": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.options": [
+      "apps/mesh-monitor/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "apps/mesh-stream-gateway": {
+    "root": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.command": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.command": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/mesh-stream-gateway/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/mesh/domain-models": {
+    "root": [
+      "libs/mesh/domain-models/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/mesh/domain-models/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/mesh/domain-models/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/mesh/domain-models/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/mesh/feature-dashboard": {
+    "root": [
+      "libs/mesh/feature-dashboard/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/mesh/feature-dashboard/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/mesh/feature-dashboard/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/mesh/feature-dashboard/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/mesh/simulation": {
+    "root": [
+      "libs/mesh/simulation/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/mesh/simulation/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/mesh/simulation/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/mesh/simulation/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/mesh/state": {
+    "root": [
+      "libs/mesh/state/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/mesh/state/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/mesh/state/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/mesh/state/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/mesh/stream-contracts": {
+    "root": [
+      "libs/mesh/stream-contracts/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/mesh/stream-contracts/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/mesh/stream-contracts/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/mesh/stream-contracts/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/mesh/ui-grid": {
+    "root": [
+      "libs/mesh/ui-grid/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/mesh/ui-grid/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/mesh/ui-grid/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/mesh/ui-grid/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/mesh/ui-node": {
+    "root": [
+      "libs/mesh/ui-node/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/mesh/ui-node/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/mesh/ui-node/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/mesh/ui-node/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/shared/i18n": {
+    "root": [
+      "libs/shared/i18n/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/i18n/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/i18n/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/i18n/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/shared/observability": {
+    "root": [
+      "libs/shared/observability/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/observability/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/observability/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/observability/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/shared/perf": {
+    "root": [
+      "libs/shared/perf/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/perf/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/perf/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/perf/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/shared/security": {
+    "root": [
+      "libs/shared/security/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/security/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/security/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/security/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "libs/shared/theme": {
+    "root": [
+      "libs/shared/theme/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/theme/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/theme/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/theme/project.json",
+      "nx/core/project-json"
+    ]
+  }
+}

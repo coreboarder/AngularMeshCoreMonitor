@@ -37,12 +37,13 @@ Purpose: Turn the approved plan into a deterministic build order for the Nx + An
 1. Build the dashboard shell.
 2. Render the 250+ node grid with stable keyed updates.
 3. Add the selected node sidebar.
-4. Add topology analytics panel for all users.
-5. Add responsive behavior for mobile, tablet, and desktop.
+4. Add routed traffic lines, directional overlays, and packet flow indicators between nodes.
+5. Add topology analytics panel for all users.
+6. Add responsive behavior for mobile, tablet, and desktop.
 
 ### Step 6 - Hex Visual Mode
 1. Build the 3D hex node component.
-2. Add pulsing edge effects tied to live telemetry.
+2. Add pulsing edge effects tied to live telemetry and direction of travel.
 3. Keep hex mode opt-in.
 4. Add reduced-motion fallback.
 5. Keep custom CSS isolated to the visual layer.
@@ -78,6 +79,7 @@ Purpose: Turn the approved plan into a deterministic build order for the Nx + An
 - The app can render 250+ nodes on Apple M2 baseline hardware.
 - The embedded gateway can stream simulated traffic and is ready for serial and TCP adapters.
 - Bootstrap v6-dev is pinned and reproducible.
+- Packet direction, routing, and relay relationships are visible in the UI.
 - Hex mode works as an opt-in visual variant.
 - All supported locales are wired.
 - Security, retention, and test gates are in place.

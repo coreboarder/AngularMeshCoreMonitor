@@ -1,21 +1,89 @@
 import type { MeshMonitorShellViewModel } from './app-shell.ts';
+import type { MeshNodeTelemetry } from '../../../libs/mesh/domain-models/src/index.ts';
 
-function renderNodeCell(index: number, nodeId?: string): string {
-  if (!nodeId) {
+function getNodeTone(node: MeshNodeTelemetry): string {
+  if (node.health === 'critical') {
+    return 'critical';
+  }
+
+  if (node.health === 'warning') {
+    return 'warning';
+  }
+
+  if (node.health === 'offline') {
+    return 'offline';
+  }
+
+  return 'healthy';
+}
+
+function renderNodeCell(index: number, node?: MeshNodeTelemetry): string {
+  if (!node) {
     return '<div class="mesh-node mesh-node--empty"></div>';
   }
 
+  const tone = getNodeTone(node);
+
   return [
-    '<div class="mesh-node">',
+    `<div class="mesh-node mesh-node--${tone}" data-node-id="${node.id}" data-node-health="${node.health}">`,
     `  <div class="mesh-node__index">${index + 1}</div>`,
-    `  <div class="mesh-node__label">${nodeId}</div>`,
+    `  <div class="mesh-node__label">${node.label}</div>`,
+    `  <div class="mesh-node__meta">${node.role} · ${node.signalStrength}% · ${node.packetCount} packets</div>`,
     '</div>',
   ].join('\n');
 }
 
+function nodeCenter(index: number, columns: number): { x: number; y: number } {
+  const row = Math.floor(index / columns);
+  const column = index % columns;
+  return {
+    x: ((column + 0.5) / columns) * 100,
+    y: ((row + 0.5) / Math.ceil(250 / columns)) * 100,
+  };
+}
+
+function renderTrafficOverlay(shell: MeshMonitorShellViewModel): string {
+  const columns = shell.dashboard.grid.columns;
+  const indexById = new Map(shell.nodes.map((node, index) => [node.id, index] as const));
+
+  const paths = shell.paths.map((path) => {
+    const sourceIndex = indexById.get(path.sourceId);
+    const relayIndex = path.relayId ? indexById.get(path.relayId) : undefined;
+    const destinationIndex = indexById.get(path.destinationId);
+
+    if (sourceIndex === undefined || destinationIndex === undefined) {
+      return '';
+    }
+
+    const source = nodeCenter(sourceIndex, columns);
+    const destination = nodeCenter(destinationIndex, columns);
+    const relay = relayIndex === undefined ? undefined : nodeCenter(relayIndex, columns);
+    const controlPoint = relay ?? {
+      x: (source.x + destination.x) / 2,
+      y: Math.min(source.y, destination.y) - 2.5,
+    };
+
+    return [
+      `<path class="mesh-path mesh-path--${path.phase}" data-path-id="${path.id}" d="M ${source.x.toFixed(2)} ${source.y.toFixed(2)} Q ${controlPoint.x.toFixed(2)} ${controlPoint.y.toFixed(2)} ${destination.x.toFixed(2)} ${destination.y.toFixed(2)}" />`,
+      `<circle class="mesh-path__marker mesh-path__marker--source" cx="${source.x.toFixed(2)}" cy="${source.y.toFixed(2)}" r="0.5" />`,
+      `<circle class="mesh-path__marker mesh-path__marker--destination" cx="${destination.x.toFixed(2)}" cy="${destination.y.toFixed(2)}" r="0.5" />`,
+      relay ? `<circle class="mesh-path__marker mesh-path__marker--relay" cx="${relay.x.toFixed(2)}" cy="${relay.y.toFixed(2)}" r="0.5" />` : '',
+    ].join('\n');
+  }).filter(Boolean).join('\n');
+
+  return `<svg class="mesh-flow" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <marker id="mesh-arrow" markerWidth="4" markerHeight="4" refX="3" refY="2" orient="auto-start-reverse">
+        <path d="M 0 0 L 4 2 L 0 4 z" fill="var(--accent)" />
+      </marker>
+    </defs>
+    ${paths}
+  </svg>`;
+}
+
 export function renderDashboardPage(shell: MeshMonitorShellViewModel): string {
   const totalCells = shell.dashboard.grid.rows * shell.dashboard.grid.columns;
-  const cells = Array.from({ length: totalCells }, (_, index) => renderNodeCell(index, shell.nodes[index]?.id));
+  const cells = Array.from({ length: totalCells }, (_, index) => renderNodeCell(index, shell.nodes[index]));
 
   return `<!doctype html>
 <html lang="en">
@@ -65,10 +133,51 @@ export function renderDashboardPage(shell: MeshMonitorShellViewModel): string {
         padding: 16px;
         backdrop-filter: blur(18px);
       }
+      .mesh-network {
+        position: relative;
+      }
       .mesh-grid {
         display: grid;
         grid-template-columns: repeat(${shell.dashboard.grid.columns}, minmax(0, 1fr));
         gap: 10px;
+        position: relative;
+        z-index: 2;
+      }
+      .mesh-flow {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+        overflow: visible;
+      }
+      .mesh-path {
+        fill: none;
+        stroke: color-mix(in srgb, var(--accent) 80%, white 10%);
+        stroke-width: 0.4;
+        stroke-linecap: round;
+        stroke-dasharray: 1.5 1.2;
+        stroke-dashoffset: 0;
+        marker-end: url(#mesh-arrow);
+        animation: mesh-flow 2.8s linear infinite;
+        opacity: 0.65;
+      }
+      .mesh-path--relay {
+        stroke: color-mix(in srgb, var(--warning) 75%, white 10%);
+      }
+      .mesh-path--destination {
+        stroke: color-mix(in srgb, var(--success) 85%, white 10%);
+      }
+      .mesh-path--source {
+        stroke: color-mix(in srgb, var(--accent) 80%, white 10%);
+      }
+      .mesh-path__marker {
+        fill: transparent;
+      }
+      @keyframes mesh-flow {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -18; }
       }
       .mesh-node {
         min-height: 76px;
@@ -78,6 +187,19 @@ export function renderDashboardPage(shell: MeshMonitorShellViewModel): string {
         padding: 10px;
         display: grid;
         align-content: space-between;
+        transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+      }
+      .mesh-node--healthy {
+        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--success) 30%, transparent);
+      }
+      .mesh-node--warning {
+        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--warning) 30%, transparent);
+      }
+      .mesh-node--critical {
+        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--critical) 35%, transparent);
+      }
+      .mesh-node--offline {
+        opacity: 0.45;
       }
       .mesh-node--empty {
         opacity: 0.15;
@@ -89,6 +211,10 @@ export function renderDashboardPage(shell: MeshMonitorShellViewModel): string {
       .mesh-node__label {
         font-size: 12px;
         opacity: 0.8;
+      }
+      .mesh-node__meta {
+        font-size: 11px;
+        opacity: 0.68;
       }
       .mesh-kpis {
         display: grid;
@@ -126,12 +252,42 @@ export function renderDashboardPage(shell: MeshMonitorShellViewModel): string {
         <div class="mesh-kpi"><span class="mesh-kpi__label">Render ms</span><span class="mesh-kpi__value">${shell.perf.renderLatencyMs}</span></div>
         <div class="mesh-kpi"><span class="mesh-kpi__label">Latency ms</span><span class="mesh-kpi__value">${shell.perf.endToEndLatencyMs}</span></div>
       </section>
-      <section class="mesh-panel">
+      <section class="mesh-panel mesh-network">
+        ${renderTrafficOverlay(shell)}
         <div class="mesh-grid">
           ${cells.join('\n')}
         </div>
       </section>
     </main>
+    <script>
+      const refresh = async () => {
+        const response = await fetch('/api/state', { headers: { accept: 'application/json' } });
+        const shell = await response.json();
+
+        document.querySelector('.mesh-shell__meta').textContent = shell.localeCount + ' locales • Bootstrap ' + shell.theme.mode + ' mode • v6-dev baseline';
+        document.querySelectorAll('.mesh-kpi__value')[0].textContent = shell.perf.fps;
+        document.querySelectorAll('.mesh-kpi__value')[1].textContent = shell.perf.eventRate;
+        document.querySelectorAll('.mesh-kpi__value')[2].textContent = shell.perf.renderLatencyMs;
+        document.querySelectorAll('.mesh-kpi__value')[3].textContent = shell.perf.endToEndLatencyMs;
+
+        const nodes = shell.nodes ?? [];
+        document.querySelectorAll('[data-node-id]').forEach((element) => {
+          const nodeId = element.getAttribute('data-node-id');
+          const node = nodes.find((candidate) => candidate.id === nodeId);
+          if (!node) {
+            return;
+          }
+
+          element.setAttribute('data-node-health', node.health);
+          element.className = 'mesh-node mesh-node--' + node.health;
+          element.querySelector('.mesh-node__label').textContent = node.label;
+          element.querySelector('.mesh-node__meta').textContent = node.role + ' · ' + node.signalStrength + '% · ' + node.packetCount + ' packets';
+        });
+      };
+
+      refresh();
+      setInterval(refresh, 1500);
+    </script>
   </body>
 </html>`;
 }

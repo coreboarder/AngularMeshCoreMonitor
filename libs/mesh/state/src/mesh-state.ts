@@ -1,4 +1,5 @@
 import type { MeshNodeTelemetry } from '../../domain-models/src/index.ts';
+import type { MeshTrafficPath } from '../../domain-models/src/index.ts';
 import type { MeshStreamEnvelope } from '../../stream-contracts/src/index.ts';
 import { MeshTrafficSimulator } from '../../simulation/src/index.ts';
 
@@ -6,6 +7,7 @@ export type MeshStreamSource = 'simulator' | 'serial' | 'tcp';
 
 export interface MeshStateSnapshot {
   nodes: Map<string, MeshNodeTelemetry>;
+  paths: MeshTrafficPath[];
   source: MeshStreamSource;
   sequence: number;
 }
@@ -28,6 +30,7 @@ export class MeshStateStore {
 
     return {
       nodes: this.nodes,
+      paths: this.simulator.nextPaths(),
       source: 'simulator',
       sequence: this.sequence,
     };

@@ -17,10 +17,11 @@ Date: 2026-06-24
 4. Add profile controls (idle/normal/burst/degraded).
 5. Add perf HUD (fps and events/s).
 6. Implement reconnect, heartbeat, and stale-stream UI indicators.
+7. Add routed traffic paths, directional arrows, and source-to-relay-to-destination highlighting.
 
 ## Sprint 3 - Visual Power Demo
 1. Implement 3D hex node renderer.
-2. Implement data-driven edge pulse animation.
+2. Implement data-driven edge pulse animation with visible direction of travel.
 3. Add quality modes and reduced-motion fallback.
 4. Add deferred topology panel.
 5. Add scenario scripts for packet loss and node dropouts.
@@ -39,6 +40,8 @@ Date: 2026-06-24
 - 100-node grid stable at target update rates.
 - No memory growth during 30-minute run.
 - Clear visual distinction for healthy/warn/critical states.
+- Traffic flow direction is obvious at a glance across the mesh.
+- Selected node can be traced to its relays and downstream receivers.
 - Hex mode can be toggled on/off at runtime.
 - Deferred panel behavior demonstrated on demand.
 - Test, lint, build targets green in Nx.

@@ -37,6 +37,8 @@ Use this as the source of truth for implementation:
 ## Screenshot-Driven UI Notes
 - Keep the current composition: command header, dense node matrix, operational sidebar.
 - Preserve color semantics: green healthy, amber warning, red critical.
+- Treat directional traffic flow as a hard design requirement: links must show where data is moving, which nodes are emitting, which nodes are relaying, and which nodes are receiving.
+- Prefer visible route direction over purely decorative animation; motion must explain packet movement across the mesh.
 - For the 3D hex node variant, animate only data-driven states (no decorative infinite spin).
 - Keep a fallback 2D card mode for low-power devices or reduced-motion users.
 

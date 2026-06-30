@@ -7,6 +7,7 @@ UI framework baseline: Bootstrap v6-dev pinned to a known commit snapshot, with 
 
 ## 1. Outcomes
 - Real-time dashboard with 250+ nodes and node-level selective rendering.
+- Directional traffic visualization showing packet movement, relays, route direction, and active source/destination nodes.
 - Simulated transport service that emits realistic traffic patterns.
 - Two node visual modes: standard card and 3D hex with pulse lines.
 - Clear performance instrumentation and demo script for senior engineers.
@@ -108,26 +109,28 @@ Exit criteria:
 2. Build ui-grid and ui-node libs:
    - Stable keyed rendering for each node.
    - Visual state tokens (healthy/warn/critical).
-3. Add deferred panel for heavy topology analytics.
-4. Integrate Bootstrap 5.3.8 theming layer with CSS variables and color modes.
+3. Add directional traffic overlays and routed link paths between nodes.
+4. Add deferred panel for heavy topology analytics.
+5. Integrate Bootstrap 5.3.8 theming layer with CSS variables and color modes.
 
 Exit criteria:
-- Functional dashboard with clear parity to screenshot layout.
+- Functional dashboard with clear parity to screenshot layout and visible traffic direction between nodes.
 - Layout remains responsive at 320px, tablet, and desktop breakpoints.
 
 ### Phase D - 3D Hex Node Mode (Day 3-4)
 1. Build hex component in libs/mesh/ui-node:
    - Hex body using CSS transforms and layered pseudo-elements.
-   - Pulsing edge lines mapped to live signal/link metrics.
+   - Pulsing edge lines mapped to live signal/link metrics and flow direction.
 2. Add mode toggle:
    - Card mode.
    - Hex mode.
    - Reduced-motion fallback.
 3. Keep animation data-driven (no decorative constant spin).
-4. Add user preference for reduced motion and persist setting.
+4. Use pulse direction, intensity, and offset to indicate traffic origin, relay, and destination.
+5. Add user preference for reduced motion and persist setting.
 
 Exit criteria:
-- Hex visuals respond to telemetry and remain performant with 100 nodes.
+- Hex visuals respond to telemetry, show directional traffic, and remain performant with 100 nodes.
 
 ### Phase E - Performance + Diagnostics (Day 4)
 1. Implement perf instrumentation in libs/shared/perf:
@@ -236,9 +239,9 @@ Planned upgrade trigger:
 
 ## 8. Demo Narrative (5 Minutes)
 1. Start in card mode with normal traffic.
-2. Show selective node updates and config edits.
-3. Switch to burst mode and enable perf overlay.
-4. Toggle to 3D hex mode and show pulse response to traffic.
+2. Show selective node updates, active relays, and config edits.
+3. Switch to burst mode and enable perf overlay while packet direction remains visible.
+4. Toggle to 3D hex mode and show pulse response to routed traffic.
 5. Scroll to deferred topology panel and show delayed loading behavior.
 
 ## 9. Open Decisions

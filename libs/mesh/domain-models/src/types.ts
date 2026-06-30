@@ -19,3 +19,12 @@ export interface MeshNodeCommandDraft {
   hopLimit: number;
   channelName: string;
 }
+
+export interface MeshTrafficPath {
+  id: string;
+  sourceId: string;
+  relayId?: string;
+  destinationId: string;
+  intensity: number;
+  phase: 'source' | 'relay' | 'destination';
+}

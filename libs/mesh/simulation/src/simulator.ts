@@ -1,4 +1,4 @@
-import type { MeshNodeTelemetry, MeshNodeRole } from '../../domain-models/src/index.ts';
+import type { MeshNodeTelemetry, MeshNodeRole, MeshTrafficPath } from '../../domain-models/src/index.ts';
 import type { MeshStreamEnvelope } from '../../stream-contracts/src/index.ts';
 
 const roles: MeshNodeRole[] = ['client', 'repeater', 'room-server'];
@@ -40,6 +40,23 @@ export class MeshTrafficSimulator {
         nodeId,
         kind: 'telemetry',
         payload: telemetry,
+      };
+    });
+  }
+
+  nextPaths(): MeshTrafficPath[] {
+    return Array.from({ length: Math.min(18, this.nodeCount) }, (_, index) => {
+      const sourceIndex = index;
+      const relayIndex = (index + 3) % this.nodeCount;
+      const destinationIndex = (index + 7) % this.nodeCount;
+
+      return {
+        id: `path-${sourceIndex + 1}-${relayIndex + 1}-${destinationIndex + 1}`,
+        sourceId: `node-${sourceIndex + 1}`,
+        relayId: `node-${relayIndex + 1}`,
+        destinationId: `node-${destinationIndex + 1}`,
+        intensity: 0.45 + ((index % 7) * 0.07),
+        phase: index % 3 === 0 ? 'source' : index % 3 === 1 ? 'relay' : 'destination',
       };
     });
   }

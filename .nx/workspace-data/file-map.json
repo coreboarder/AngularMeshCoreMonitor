@@ -43,36 +43,44 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tsconfig.base.json",
-        "hash": "3474563968000904978"
+        "file": ".editorconfig",
+        "hash": "7193498543796474235"
       },
       {
-        "file": "nx.json",
-        "hash": "12312132159216346001"
+        "file": "Explainer.md",
+        "hash": "5980922451537597533"
+      },
+      {
+        "file": "PLANNING/02-Nx-Angular22-Implementation-Plan.md",
+        "hash": "10972502335325434431"
+      },
+      {
+        "file": "PLANNING/05-Questions-For-You.md",
+        "hash": "4809020040727429884"
+      },
+      {
+        "file": "PLANNING/04-Bootstrap-Modern-Strategy.md",
+        "hash": "16303677105951430354"
       },
       {
         "file": "AngularMeshNetworkMonitor.png",
         "hash": "7820008169852182925"
       },
       {
-        "file": "PLANNING/07-Execution-Runbook.md",
-        "hash": "15162469181527339819"
+        "file": "PLANNING/08-Traffic-Connections-Redesign-Plan.md",
+        "hash": "8879478741558183883"
       },
       {
-        "file": "package-lock.json",
-        "hash": "13952662498310145388"
+        "file": "README.md",
+        "hash": "4048698407547177801"
       },
       {
-        "file": "PLANNING/03-Execution-Backlog.md",
-        "hash": "16366560404937889604"
+        "file": ".gitignore",
+        "hash": "12864762191038680012"
       },
       {
-        "file": "PLANNING/01-Explainer-Review.md",
-        "hash": "8206932858016448754"
-      },
-      {
-        "file": ".editorconfig",
-        "hash": "7193498543796474235"
+        "file": "nx.json",
+        "hash": "12312132159216346001"
       },
       {
         "file": "package.json",
@@ -83,32 +91,32 @@
         "hash": "12510973278325195970"
       },
       {
-        "file": "README.md",
-        "hash": "4048698407547177801"
+        "file": "PLANNING/01-Explainer-Review.md",
+        "hash": "8206932858016448754"
       },
       {
-        "file": "PLANNING/04-Bootstrap-Modern-Strategy.md",
-        "hash": "16303677105951430354"
+        "file": ".tmp-monitor-preview.png",
+        "hash": "11823541421375459284"
       },
       {
-        "file": "Explainer.md",
-        "hash": "5980922451537597533"
+        "file": "package-lock.json",
+        "hash": "13952662498310145388"
       },
       {
-        "file": ".gitignore",
-        "hash": "12864762191038680012"
+        "file": "PLANNING/07-Execution-Runbook.md",
+        "hash": "15162469181527339819"
       },
       {
-        "file": "PLANNING/05-Questions-For-You.md",
-        "hash": "4809020040727429884"
+        "file": "tsconfig.base.json",
+        "hash": "3474563968000904978"
+      },
+      {
+        "file": "PLANNING/03-Execution-Backlog.md",
+        "hash": "16366560404937889604"
       },
       {
         "file": "Screenshot 2026-06-24 at 10.29.10 PM.png",
         "hash": "1918133645275144907"
-      },
-      {
-        "file": "PLANNING/02-Nx-Angular22-Implementation-Plan.md",
-        "hash": "10972502335325434431"
       }
     ],
     "projectFileMap": {
@@ -124,180 +132,6 @@
         {
           "file": "libs/mesh/stream-contracts/src/types.ts",
           "hash": "9939522258936563176"
-        }
-      ],
-      "state": [
-        {
-          "file": "libs/mesh/state/project.json",
-          "hash": "11037968107594601723"
-        },
-        {
-          "file": "libs/mesh/state/src/index.ts",
-          "hash": "17893397625518941479"
-        },
-        {
-          "file": "libs/mesh/state/src/mesh-state.ts",
-          "hash": "9495749979152111992"
-        }
-      ],
-      "security": [
-        {
-          "file": "libs/shared/security/project.json",
-          "hash": "1392388812412651697"
-        },
-        {
-          "file": "libs/shared/security/src/config.ts",
-          "hash": "10733346698802877946"
-        },
-        {
-          "file": "libs/shared/security/src/index.ts",
-          "hash": "8499299177282711436"
-        }
-      ],
-      "observability": [
-        {
-          "file": "libs/shared/observability/project.json",
-          "hash": "9392802601206506536"
-        },
-        {
-          "file": "libs/shared/observability/src/index.ts",
-          "hash": "6279764533078239848"
-        },
-        {
-          "file": "libs/shared/observability/src/log-entry.ts",
-          "hash": "13144604464037894618"
-        }
-      ],
-      "feature-dashboard": [
-        {
-          "file": "libs/mesh/feature-dashboard/project.json",
-          "hash": "16826228585844344716"
-        },
-        {
-          "file": "libs/mesh/feature-dashboard/src/dashboard-model.ts",
-          "hash": "18221837301811933127"
-        },
-        {
-          "file": "libs/mesh/feature-dashboard/src/index.ts",
-          "hash": "983092454010792071"
-        }
-      ],
-      "simulation": [
-        {
-          "file": "libs/mesh/simulation/project.json",
-          "hash": "16267497030314678420"
-        },
-        {
-          "file": "libs/mesh/simulation/src/index.ts",
-          "hash": "16823972207180611316"
-        },
-        {
-          "file": "libs/mesh/simulation/src/simulator.ts",
-          "hash": "10682175668050653632"
-        }
-      ],
-      "i18n": [
-        {
-          "file": "libs/shared/i18n/project.json",
-          "hash": "18328394907692651862"
-        },
-        {
-          "file": "libs/shared/i18n/src/index.ts",
-          "hash": "16757862263769166850"
-        },
-        {
-          "file": "libs/shared/i18n/src/locales.ts",
-          "hash": "15766791746027531596"
-        }
-      ],
-      "ui-node": [
-        {
-          "file": "libs/mesh/ui-node/project.json",
-          "hash": "11938661768035613594"
-        },
-        {
-          "file": "libs/mesh/ui-node/src/hex-visual.ts",
-          "hash": "8965059503843755271"
-        },
-        {
-          "file": "libs/mesh/ui-node/src/index.ts",
-          "hash": "4913501749902128554"
-        }
-      ],
-      "mesh-stream-gateway": [
-        {
-          "file": "apps/mesh-stream-gateway/project.json",
-          "hash": "886122126340682934"
-        },
-        {
-          "file": "apps/mesh-stream-gateway/src/index.ts",
-          "hash": "4789799883402547317"
-        },
-        {
-          "file": "apps/mesh-stream-gateway/src/main.ts",
-          "hash": "9001943315974944986"
-        },
-        {
-          "file": "apps/mesh-stream-gateway/src/server.ts",
-          "hash": "14853176731397220897"
-        }
-      ],
-      "ui-grid": [
-        {
-          "file": "libs/mesh/ui-grid/project.json",
-          "hash": "454026789327444248"
-        },
-        {
-          "file": "libs/mesh/ui-grid/src/grid-layout.ts",
-          "hash": "12870366479547887147"
-        },
-        {
-          "file": "libs/mesh/ui-grid/src/index.ts",
-          "hash": "8423159401146862691"
-        }
-      ],
-      "domain-models": [
-        {
-          "file": "libs/mesh/domain-models/project.json",
-          "hash": "5222505723177747018"
-        },
-        {
-          "file": "libs/mesh/domain-models/src/index.ts",
-          "hash": "5998847849162339317"
-        },
-        {
-          "file": "libs/mesh/domain-models/src/types.ts",
-          "hash": "12382912400901022898"
-        }
-      ],
-      "mesh-monitor": [
-        {
-          "file": "apps/mesh-monitor/project.json",
-          "hash": "12293334512443616198"
-        },
-        {
-          "file": "apps/mesh-monitor/src/app-shell.css",
-          "hash": "3092153325134856750"
-        },
-        {
-          "file": "apps/mesh-monitor/src/app-shell.ts",
-          "hash": "7208140373879261527"
-        },
-        {
-          "file": "apps/mesh-monitor/src/index.ts",
-          "hash": "12088076494748659540"
-        },
-        {
-          "file": "apps/mesh-monitor/src/main.ts",
-          "hash": "6303534572402737385"
-        },
-        {
-          "file": "apps/mesh-monitor/src/render-dashboard.ts",
-          "hash": "5774901898278569783"
-        },
-        {
-          "file": "apps/mesh-monitor/src/styles/bootstrap-theme.css",
-          "hash": "732680151723633554"
         }
       ],
       "perf": [
@@ -326,6 +160,184 @@
         {
           "file": "libs/shared/theme/src/index.ts",
           "hash": "7443824391962281525"
+        }
+      ],
+      "simulation": [
+        {
+          "file": "libs/mesh/simulation/project.json",
+          "hash": "16267497030314678420"
+        },
+        {
+          "file": "libs/mesh/simulation/src/index.ts",
+          "hash": "16823972207180611316"
+        },
+        {
+          "file": "libs/mesh/simulation/src/simulator.ts",
+          "hash": "1799486877112926149"
+        }
+      ],
+      "domain-models": [
+        {
+          "file": "libs/mesh/domain-models/project.json",
+          "hash": "5222505723177747018"
+        },
+        {
+          "file": "libs/mesh/domain-models/src/index.ts",
+          "hash": "5998847849162339317"
+        },
+        {
+          "file": "libs/mesh/domain-models/src/types.ts",
+          "hash": "9364450613705118031"
+        }
+      ],
+      "ui-node": [
+        {
+          "file": "libs/mesh/ui-node/project.json",
+          "hash": "11938661768035613594"
+        },
+        {
+          "file": "libs/mesh/ui-node/src/hex-visual.ts",
+          "hash": "8965059503843755271"
+        },
+        {
+          "file": "libs/mesh/ui-node/src/index.ts",
+          "hash": "4913501749902128554"
+        }
+      ],
+      "state": [
+        {
+          "file": "libs/mesh/state/project.json",
+          "hash": "11037968107594601723"
+        },
+        {
+          "file": "libs/mesh/state/src/index.ts",
+          "hash": "17893397625518941479"
+        },
+        {
+          "file": "libs/mesh/state/src/mesh-state.ts",
+          "hash": "2451596543008280605"
+        }
+      ],
+      "mesh-monitor": [
+        {
+          "file": "apps/mesh-monitor/project.json",
+          "hash": "12293334512443616198"
+        },
+        {
+          "file": "apps/mesh-monitor/src/app-shell.css",
+          "hash": "3092153325134856750"
+        },
+        {
+          "file": "apps/mesh-monitor/src/app-shell.ts",
+          "hash": "7212609215860043785"
+        },
+        {
+          "file": "apps/mesh-monitor/src/index.ts",
+          "hash": "12088076494748659540"
+        },
+        {
+          "file": "apps/mesh-monitor/src/main.ts",
+          "hash": "13935084233652516224"
+        },
+        {
+          "file": "apps/mesh-monitor/src/render-dashboard.ts",
+          "hash": "15121382836497642636"
+        },
+        {
+          "file": "apps/mesh-monitor/src/styles/bootstrap-theme.css",
+          "hash": "732680151723633554"
+        }
+      ],
+      "mesh-stream-gateway": [
+        {
+          "file": "apps/mesh-stream-gateway/project.json",
+          "hash": "886122126340682934"
+        },
+        {
+          "file": "apps/mesh-stream-gateway/src/index.ts",
+          "hash": "4789799883402547317"
+        },
+        {
+          "file": "apps/mesh-stream-gateway/src/main.ts",
+          "hash": "9001943315974944986"
+        },
+        {
+          "file": "apps/mesh-stream-gateway/src/server.ts",
+          "hash": "14853176731397220897"
+        }
+      ],
+      "feature-dashboard": [
+        {
+          "file": "libs/mesh/feature-dashboard/project.json",
+          "hash": "16826228585844344716"
+        },
+        {
+          "file": "libs/mesh/feature-dashboard/src/dashboard-model.ts",
+          "hash": "18221837301811933127"
+        },
+        {
+          "file": "libs/mesh/feature-dashboard/src/index.ts",
+          "hash": "983092454010792071"
+        }
+      ],
+      "observability": [
+        {
+          "file": "libs/shared/observability/project.json",
+          "hash": "9392802601206506536"
+        },
+        {
+          "file": "libs/shared/observability/src/index.ts",
+          "hash": "6279764533078239848"
+        },
+        {
+          "file": "libs/shared/observability/src/log-entry.ts",
+          "hash": "13144604464037894618"
+        }
+      ],
+      "security": [
+        {
+          "file": "libs/shared/security/project.json",
+          "hash": "1392388812412651697"
+        },
+        {
+          "file": "libs/shared/security/src/config.ts",
+          "hash": "10733346698802877946"
+        },
+        {
+          "file": "libs/shared/security/src/index.ts",
+          "hash": "8499299177282711436"
+        }
+      ],
+      "ui-grid": [
+        {
+          "file": "libs/mesh/ui-grid/project.json",
+          "hash": "454026789327444248"
+        },
+        {
+          "file": "libs/mesh/ui-grid/src/grid-layout.ts",
+          "hash": "12870366479547887147"
+        },
+        {
+          "file": "libs/mesh/ui-grid/src/index.ts",
+          "hash": "13209162596354772300"
+        },
+        {
+          "file": "libs/mesh/ui-grid/src/traffic-routing.ts",
+          "hash": "5567989286161915192"
+        }
+      ],
+      "i18n": [
+        {
+          "file": "libs/shared/i18n/project.json",
+          "hash": "18328394907692651862"
+        },
+        {
+          "file": "libs/shared/i18n/src/index.ts",
+          "hash": "16757862263769166850"
+        },
+        {
+          "file": "libs/shared/i18n/src/locales.ts",
+          "hash": "15766791746027531596"
         }
       ]
     }

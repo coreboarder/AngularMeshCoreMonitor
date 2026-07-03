@@ -8,7 +8,11 @@ const port = Number(process.env['PORT'] ?? 4200);
 
 function nextShell() {
   const snapshot = store.tick();
-  return createMeshMonitorShellFromSnapshot(Array.from(snapshot.nodes.values()), snapshot.paths);
+  return createMeshMonitorShellFromSnapshot(
+    Array.from(snapshot.nodes.values()),
+    snapshot.topologyEdges,
+    snapshot.trafficFlows,
+  );
 }
 
 const server = createServer((request, response) => {
